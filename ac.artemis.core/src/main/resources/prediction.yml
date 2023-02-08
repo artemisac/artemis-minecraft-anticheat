@@ -1,0 +1,54 @@
+#######################################################################
+#            ____               _ _      _   _                        #
+#           |  _ \ _ __ ___  __| (_) ___| |_(_) ___  _ __             #
+#           | |_) | '__/ _ \/ _` | |/ __| __| |/ _ \| '_ \            #
+#           |  __/| | |  __/ (_| | | (__| |_| | (_) | | | |           #
+#           |_|   |_|  \___|\__,_|_|\___|\__|_|\___/|_| |_|           #
+#                                                                     #
+#######################################################################
+
+#   I am the bone of my code
+#　　Packets is my body and data is my blood
+#　　I have created over a thousand scenarios
+#　　Unknown to death
+#　　Nor known to life
+#　　Have withstood pain to create many deltas
+#　　Yet those deltas shall never hold anything
+#　　So, as I pray, Unlimited Predictions Works
+#   - An old wise man, 967 BC
+
+#######################################################################
+#                              [VERSION]                              #
+# The version of the prediction engine will be of an important matter.#
+# Whilst the V2 has known to be of much much faster speeds and more   #
+# well rounded efficiency, it's best to consider both before making   #
+# the choice.                                                         #
+#                                                                     #
+# $ V1: Old, robust, perfected for 1.8                                #
+# $ V2: Newer, better, perfected for 1.7-1.16                         #
+#######################################################################
+version: V2
+
+#######################################################################
+#                             [Skip-Tick]                             #
+# Whilst this can be a little intensive and can at times create a     #
+# intensive overhead in the worse case scenario, it certainly does    #
+# improve overall stability in most cases, especially with scenarios  #
+# which have the 0.03 issue notoriously present due to Mojang's bs    #
+#                                                                     #
+# $ true: Enable the option                                           #
+# $ false: Disable the option                                         #
+#######################################################################
+skip-tick: true
+
+#######################################################################
+#                     [Force-Compensated-World]                       #
+# Whilst this can be a little intensive and can at times create a     #
+# intensive overhead in the worse case scenario, it certainly does    #
+# improve overall stability in most cases, especially with scenarios  #
+# which have the 0.03 issue notoriously present due to Mojang's bs    #
+#                                                                     #
+# $ true: Enable the option                                           #
+# $ false: Disable the option                                         #
+#######################################################################
+force-compensated: false

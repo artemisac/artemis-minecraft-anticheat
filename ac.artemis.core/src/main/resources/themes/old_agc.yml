@@ -1,0 +1,46 @@
+general:
+  prefix: '%brackets%[%main%⚠%brackets%] '
+
+colors:
+  main: '&f'
+  secondary: '&7'
+  brackets: '&c'
+commands:
+  prefix: 'artemis'
+  alerts-command:
+    value: 'alerts'
+    permission: '%prefix%.alerts'
+  verbose-command:
+    value: 'verbose'
+    permission: '%prefix%.verbose'
+  main-command:
+    value: 'artemis'
+    permission: '%prefix%.admin'
+  debug-command:
+    value: 'debug'
+    permission: '%prefix%.debug'
+  database-command:
+    value: 'storage'
+    permission: '%prefix%.dbstatus'
+
+messages:
+  violation: '%prefix% %main%%user% %secondary%might be using &b%check% &7[%vl%]'
+  verbose: '%prefix% %main%%user% %secondary%failed %main%%check% (%type%) &7[%vl%]'
+  ban: '%prefix% %main%%user% %secondary%has been permanently suspended from the network. ID: %main%%id%'
+  banwave: '&b%impl%&7 has been added to the &bBan Wave'
+  no-permission: '&4No permissions'
+  player-only-command: ''
+  invalid-player: '%prefix% &cInvalid impl!'
+  invalid-check: '%prefix% &cInvalid check!'
+  alerts-toggled: '%prefix% &cToggled alerts %mode%'
+  verbose-toggled: '%prefix% &cToggled verbose %mode%'
+  help-message:
+    - "&7&m-----------------------------------"
+    - "&bArtemis&7 made by &bGhast"
+    - "&7Version: &cV2"
+    - "&7&m-----------------------------------"
+    - "%secondary%/%main%artemis %secondary%-> %main% Main artemis command"
+    - "%secondary%/%main%verbose %secondary%-> %main% + Toggle verboses"
+    - "%secondary%/%main%alerts %secondary%-> %main% + Toggle alerts"
+    - "%secondary%/%main%mychecks %secondary%-> %main% + See your current checks"
+    - "&7&m-----------------------------------"

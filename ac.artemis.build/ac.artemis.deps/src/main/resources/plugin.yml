@@ -1,0 +1,6 @@
+name: Deps
+version: ${project.version}
+main: ac.artemis.anticheat.deps.Deps
+authors: [Ghast, Frep, Elevated, Tecnio, GladUrBad]
+description: Grr
+website: https://artemis.ac

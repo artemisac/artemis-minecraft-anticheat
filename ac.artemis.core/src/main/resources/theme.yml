@@ -1,0 +1,6 @@
+prefix: '&d[&6My Anticheat&d]&r '
+message:
+  verbose: '&d%impl% &6is flagging &d%check% &6(&d%type%&6) &6[&d%violation%&6] &6(&d%identifiers%&6)'
+  alert: '%impl% is using %check% &6(&d%type%&6) [%violation%] (%identifiers%)'
+  toggled-alerts: '&dyour &6alerts have been toggled %mode%'
+

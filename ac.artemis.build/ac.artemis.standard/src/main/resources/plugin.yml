@@ -1,0 +1,14 @@
+name: Artemis
+version: 2.0 B14
+main: ac.artemis.core.ArtemisMain
+prefix: Artemis
+authors: [Ghast, Frep, Elevated, Tecnio, GladUrBad]
+description: Artemis ArtemisMain plugin
+website: https://artemis.ac
+commands:
+  everbose:
+    description: 'Shows experimental verbose'
+    permission: 'artemis.experimental-verbose'
+  mychecks:
+    description: 'Shows your current checks'
+    permission: 'artemis.checks'

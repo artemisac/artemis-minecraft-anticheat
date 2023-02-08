@@ -1,0 +1,14 @@
+name: Artemis
+version: ${project.version}
+main: ac.artemis.anticheat.ArtemisDev
+prefix: ArtemisDev
+authors: [Ghast, Frep, Elevated, Tecnio, GladUrBad]
+description: Developer edition of Artemis
+website: https://artemis.ac
+commands:
+  everbose:
+    description: 'Shows experimental verbose'
+    permission: 'artemis.experimental-verbose'
+  mychecks:
+    description: 'Shows your current checks'
+    permission: 'artemis.checks'

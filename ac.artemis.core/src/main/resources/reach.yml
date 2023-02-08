@@ -1,0 +1,66 @@
+#######################################################################
+#                      ____                 _                         #
+#                     |  _ \ ___  __ _  ___| |__                      #
+#                     | |_) / _ \/ _` |/ __| '_ \                     #
+#                     |  _ <  __/ (_| | (__| | | |                    #
+#                     |_| \_\___|\__,_|\___|_| |_|                    #
+#                                                                     #
+#######################################################################
+
+#   Roses are red
+#　　Violets are blue
+#　　I hate people who use reach
+#　　And so do you
+#
+#　　Now put an end to this
+#　　Choose CPU or accuracy
+#   Whether disappointment or bliss
+#　　We will never be able to detect with 0% inaccuracy
+#   - An old wise man, 968 BC
+
+#######################################################################
+#                              [VERSION]                              #
+# The version of the reach engine will be of an important matter.     #
+# As of right now, there is only 1 version for the reach check        #
+#                                                                     #
+# $ V1: Old, robust, perfected for 1.8                                #
+#######################################################################
+version: V1
+
+#######################################################################
+#                                 [V1]                                #
+#######################################################################
+v1:
+  #####################################################################
+  #                          [CPU-Death Mode]                         #
+  # As the name may or may not convey, this mode will be cpu-intensi- #
+  # -ve. The reasoning behind this mode is specifically for servers   #
+  # with a more practice oriented game-mode which does entail a high  #
+  # concentration of players in one same spot. As for the details of  #
+  # this mode, as opposed to sending transactions in a heuristic      #
+  # fashion this mode will simply send them for every packet it needs #
+  # to confirm. Warning: this is intensive.                           #
+  #####################################################################
+  death-mode: false
+
+  #####################################################################
+  #                         [Branch Precision]                        #
+  # Since we have a very particular system, it's very difficult to    #
+  # explain the little details we have to optimize the experience.    #
+  # Essentially, the bigger the precision is, the more likely the     #
+  # branch is to grow over time, making it heavier on the server.     #
+  #                                                                   #
+  # However, the lower the precision is, the more likely it is to     #
+  # have 1 or 2 falses here and there, often not resulting in any     #
+  # critical punishments as it's parsed out by the decay.             #
+  #####################################################################
+  precision: 2
+
+  #####################################################################
+  #                           [Max branches]                          #
+  # Long story short: more branches, more CPU intensive, more ram     #
+  # usage, less 'falses' (we're talking seriously about 1-2000 odd    #
+  # of it falsing. I don't even know why I'm bothering with this but  #
+  # here have some fun I guess?                                       #
+  #####################################################################
+  max-branch: 4000

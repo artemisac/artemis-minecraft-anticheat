@@ -1,0 +1,39 @@
+general:
+  prefix: '&7[&b&lArtemis&7]'
+  packet-listening-type: 'CUSTOM' # CUSTOM ONLY CURRENTLY
+  bungeecord: false
+  debugger: true
+  theme: "artemis.yml" # COMING SOON
+  language: "en_US"
+  load-type: "LOAD_ALL"
+  remove-from-plugins: false
+  prefix-in-plugins: 'Artemus'
+ban:
+  command: 'kick %impl% &7[&bArtemis&7] &bUnfair Advantage'
+  type: 'none' # CAN BE EITHER 'banwave', 'autoban' or 'none'
+
+security:
+  encryption-key: "GENERATE_ME"
+
+database:
+  type: "SQLite"
+  mysql:
+    host: ""
+    port: 3306
+    username: ""
+    password: ""
+    database: ""
+    table: "artemis_%table%"
+    ssl: false
+  sqlite:
+    table: "artemis_%table%"
+  mongo:
+    host: ""
+    port: 5515
+    database: ""
+    auth: true
+    credentials:
+      username: ""
+      password: ""
+    collection: "artemis_%table%"
+

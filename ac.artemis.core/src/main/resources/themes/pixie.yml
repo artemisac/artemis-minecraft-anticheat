@@ -1,0 +1,47 @@
+general:
+  prefix: '%secondary%(%main%Pixie%secondary%)'
+
+colors:
+  main: '&d'
+  secondary: '&7'
+  brackets: '&8'
+
+commands:
+  prefix: 'pixie'
+  alerts-command:
+    value: 'alerts'
+    permission: '%prefix%.alerts'
+  verbose-command:
+    value: 'verbose'
+    permission: '%prefix%.verbose'
+  main-command:
+    value: 'pixie'
+    permission: '%prefix%.admin'
+  debug-command:
+    value: 'debug'
+    permission: '%prefix%.debug'
+  database-command:
+    value: 'storage'
+    permission: '%prefix%.dbstatus'
+
+messages:
+  violation: '%prefix% &b%user% %secondary%is possibly using %main%%check% %type% %brackets%(%main%%vl%%brackets%)'
+  verbose: '%prefix% &b%user% %secondary%is verbosing %main%%check% %type% %brackets%(%main%%vl%%brackets%)'
+  ban: '%prefix% %main%%user% %secondary%has been permanently suspended from the network. ID: %main%%id%'
+  banwave: '&b%impl%&7 has been added to the &bBan Wave'
+  no-permission: '&4No permissions'
+  player-only-command: ''
+  invalid-player: '%prefix% &cInvalid impl!'
+  invalid-check: '%prefix% &cInvalid check!'
+  alerts-toggled: '%prefix% &cToggled alerts %mode%'
+  verbose-toggled: '%prefix% &cToggled verbose %mode%'
+  help-message:
+    - "&7&m-----------------------------------"
+    - "&dPixie&7 made by &bGhast"
+    - "&7Version: &5<3"
+    - "&7&m-----------------------------------"
+    - "%secondary%/%main%pixie %secondary%-> %main% Main artemis command"
+    - "%secondary%/%main%verbose %secondary%-> %main% + Toggle verboses"
+    - "%secondary%/%main%alerts %secondary%-> %main% + Toggle alerts"
+    - "%secondary%/%main%mychecks %secondary%-> %main% + See your current checks"
+    - "&7&m-----------------------------------"
