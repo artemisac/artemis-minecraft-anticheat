@@ -40,7 +40,7 @@ Artemis is bundled with a variety of features which have been seen or not in the
 - Interesting exemption system which has yet to have it's potential exploited
 - Interesting common-attribute check information system to dynamically update certain settings
 - Java based encrypted loader made by Cg., all rights reserved to SoterDev.
-- Proper Maven structure that I personally love
+- Proper Gradle structure that I personally love.
 - Smart setback system with little to no issues. Can be modified in the code to be more or less strict.
 
 **The detections currently catch:** 
