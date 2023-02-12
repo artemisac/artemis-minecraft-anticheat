@@ -29,7 +29,6 @@ public class HashUtil {
 
 
 
-    @SneakyThrows
     public static void sendHashes(InitializeAction action, String license) {
 
     }

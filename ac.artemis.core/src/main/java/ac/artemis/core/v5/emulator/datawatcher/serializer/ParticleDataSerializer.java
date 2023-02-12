@@ -9,6 +9,8 @@ import ac.artemis.core.v5.emulator.particle.type.impl.ParticleRegistry_1_16;
 import ac.artemis.core.v5.emulator.pose.Pose;
 import cc.ghast.packet.buffer.ProtocolByteBuf;
 
+import java.lang.reflect.InvocationTargetException;
+
 public class ParticleDataSerializer extends AbstractDataSerializer<Particle> {
     public ParticleDataSerializer(PlayerData data) {
         super(data);
@@ -20,13 +22,13 @@ public class ParticleDataSerializer extends AbstractDataSerializer<Particle> {
     private final ParticleRegistry particleRegistry;
 
     @Override
-    public void write(ProtocolByteBuf buf, Particle value) {
+    public void write(ProtocolByteBuf buf, Particle value) throws InvocationTargetException, InstantiationException, IllegalAccessException {
         buf.writeVarInt(particleRegistry.index(value.getType()));
         value.getType().getSerializer(data).write(buf, value);
     }
 
     @Override
-    public Particle read(ProtocolByteBuf buf) {
+    public Particle read(ProtocolByteBuf buf) throws InvocationTargetException, InstantiationException, IllegalAccessException {
         final Particles type = particleRegistry.get(buf.readVarInt());
         return type.getSerializer(data).read(type, buf);
     }

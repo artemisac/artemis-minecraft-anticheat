@@ -41,6 +41,7 @@ import cc.ghast.packet.wrapper.mc.PlayerEnums;
 import cc.ghast.packet.wrapper.packet.play.client.*;
 import cc.ghast.packet.wrapper.packet.play.server.*;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
@@ -775,7 +776,7 @@ public class EmulatorPreProcessor extends AbstractHandler implements FastProcess
             if (mtt.getEntityId() == data.getPlayer().getEntityId()) {
                 data.connection.confirmFunction(ConnectionHolder.ConfirmationType.TRANSACTION, new PacketAction() {
                     @Override
-                    public void pre() {
+                    public void pre() throws InvocationTargetException, InstantiationException, IllegalAccessException {
                         data.entity.getDataWatcher().updateWatchedObjectsFromList(data.entity.getDataWatcherFactory().readWatchedListFromPacketBuffer(mtt.getBuffer()));
                     }
                 });

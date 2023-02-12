@@ -12,7 +12,7 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.24'
     // ---------
 
-    api 'ac.artemis.packet:spigot:2.0.0'
+    api files('lib/spigot-2.0.0.jar')
     api project(':api')
     api project(':replay')
     api project(':sdk')

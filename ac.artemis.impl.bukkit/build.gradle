@@ -13,13 +13,16 @@ dependencies {
     // ---------
 
     api project(':core')
+    api 'ac.artemis.packet:spigot:2.0.0'
     implementation 'fr.minuskube.inv:smart-invs:1.2.7'
     compileOnly files("lib/spigot-1.15.2.jar")
-    compileOnly files("lib/spigot-1.8.8-R0.1-SNAPSHOT.jar")
+    compileOnly files("lib/Spigot-1.8.8.jar")
     compileOnly files("lib/spigot-1.16.5.jar")
     compileOnly files("lib/spigot-1.12.2.jar")
-    compileOnly files("lib/spigot-1.18.2-R0.1-SNAPSHOT.jar")
-    compileOnly files("lib/spigot_1.7.jar")
+    compileOnly files("lib/spigot-1.18.2.jar")
+    compileOnly files("lib/spigot-1.7.10.jar")
+
+
 }
 
 description = 'impl-bukkit'

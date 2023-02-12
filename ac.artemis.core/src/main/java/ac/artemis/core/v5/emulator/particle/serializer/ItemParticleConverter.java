@@ -28,4 +28,5 @@ public class ItemParticleConverter extends AbstractParticleConverter {
     public Particle copyValue(Particle value) {
         return value;
     }
+
 }

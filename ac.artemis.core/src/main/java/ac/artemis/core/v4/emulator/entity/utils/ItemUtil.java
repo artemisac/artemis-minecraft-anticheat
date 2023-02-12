@@ -21,8 +21,7 @@ public class ItemUtil {
                 || material.equals(NMSMaterial.GOLDEN_APPLE)
                 || material.equals(NMSMaterial.ENCHANTED_GOLDEN_APPLE));
 
-        final boolean potion = material.equals(NMSMaterial.POTION)
-                && !Unsafe.v().fromBukkitPotion(stack.v()).isSplash();
+        final boolean potion = material.equals(NMSMaterial.POTION);
         if (satiated || potion) return 32;
         return 0;
     }

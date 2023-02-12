@@ -4,6 +4,9 @@ import ac.artemis.core.Artemis;
 import ac.artemis.core.v4.utils.action.InitializeAction;
 import ac.artemis.core.v4.utils.action.ShutdownAction;
 
+import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
+
 public abstract class Manager {
 
     public final Artemis plugin;
@@ -19,7 +22,7 @@ public abstract class Manager {
      *
      * @param action Initialize Action
      */
-    public abstract void init(InitializeAction action);
+    public abstract void init(InitializeAction action) throws NoSuchAlgorithmException, IOException;
 
     /**
      * Method called when plugin is shutdown

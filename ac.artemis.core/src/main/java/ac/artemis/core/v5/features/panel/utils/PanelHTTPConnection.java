@@ -9,6 +9,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public interface PanelHTTPConnection {
+
     @SneakyThrows
     default byte[] attemptConnect(final String session, final byte[] request) {
         final URL url = new URL(session);

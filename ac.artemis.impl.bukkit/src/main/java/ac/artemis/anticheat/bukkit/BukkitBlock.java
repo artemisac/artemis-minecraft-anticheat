@@ -37,7 +37,6 @@ public class BukkitBlock extends AbstractWrapper<org.bukkit.block.Block> impleme
         return wrapper.isLiquid();
     }
 
-    @Override
     public Block getRelative(BlockFace blockFace) {
         return new BukkitBlock(wrapper.getRelative(org.bukkit.block.BlockFace.values()[blockFace.ordinal()]));
     }

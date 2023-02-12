@@ -35,12 +35,12 @@ public class TimingsManager extends Manager {
         this.service = null;
     }
 
-    @SneakyThrows
+    
     public double getAverageTimePacket() {
         return this.getAverageTimePacketExecutor();
     }
 
-    @SneakyThrows
+    
     public double getAverageTimeHandler() {
         return this.getAverageTimeHandlerExecutor();
     }

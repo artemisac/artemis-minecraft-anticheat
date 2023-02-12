@@ -41,7 +41,7 @@ public abstract class AbstractTickHandler<T extends Packet> implements TickHandl
         if (!remove) {
             //Bukkit.broadcastMessage("Received " + id);
             this.getSent(id).ifPresent(e -> ping = (packet.getTimestamp() - e) / 2);
-            this.getFunction(id, false).ifPresent(function -> function.forEach(PacketAction::pre));
+            //this.getFunction(id, false).ifPresent(function -> function.forEach(PacketAction::pre));
             this.onConsume((T) packet);
         } else {
             this.getFunction(id, true).ifPresent(function -> function.forEach(PacketAction::post));

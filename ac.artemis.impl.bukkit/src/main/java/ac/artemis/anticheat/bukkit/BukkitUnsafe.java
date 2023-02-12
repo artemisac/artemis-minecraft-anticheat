@@ -6,6 +6,7 @@ import ac.artemis.packet.minecraft.entity.impl.Player;
 import ac.artemis.packet.minecraft.inventory.ItemStack;
 import ac.artemis.packet.minecraft.material.Material;
 import ac.artemis.packet.minecraft.potion.Potion;
+import lombok.SneakyThrows;
 
 public class BukkitUnsafe implements Unsafe {
     @Override
@@ -25,6 +26,6 @@ public class BukkitUnsafe implements Unsafe {
 
     @Override
     public Potion fromBukkitPotion(Object o) {
-        return o == null ? null : new BukkitPotion(org.bukkit.potion.Potion.fromItemStack((org.bukkit.inventory.ItemStack) o));
+        return o == null ? null : (Potion) new BukkitPotion(org.bukkit.potion.Potion.fromItemStack((org.bukkit.inventory.ItemStack) o)).v();
     }
 }

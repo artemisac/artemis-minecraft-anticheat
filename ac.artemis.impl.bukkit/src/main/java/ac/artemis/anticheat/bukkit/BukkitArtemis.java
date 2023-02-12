@@ -26,6 +26,7 @@ import ac.artemis.anticheat.bukkit.reflect.StandardBukkitReflection;
 import ac.artemis.packet.protocol.ProtocolVersion;
 import ac.artemis.packet.spigot.utils.ServerUtil;
 import fr.minuskube.inv.InventoryManager;
+import lombok.SneakyThrows;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -56,6 +57,7 @@ public enum BukkitArtemis implements Artemis {
      * @param pl JavaPlugin variable
      * @return itself
      */
+    @SneakyThrows
     public APIManager load(Plugin pl) {
         this.plugin = pl.v();
         this.wrappedPlugin = pl;

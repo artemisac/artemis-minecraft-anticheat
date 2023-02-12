@@ -28,7 +28,9 @@ import ac.artemis.core.v5.threading.Threading;
 import ac.artemis.core.v5.utils.TimeUtil;
 import lombok.Getter;
 
+import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -74,7 +76,7 @@ public class APIManager extends Manager {
     }
 
     @Override
-    public void init(InitializeAction initializeAction) {
+    public void init(InitializeAction initializeAction) throws NoSuchAlgorithmException, IOException {
         Chat.sendLogo();
         // CONCURRENCY
         this.service = Threading.getOrStartService("artemis-startup-service");
@@ -189,6 +191,10 @@ public class APIManager extends Manager {
             managers.add(manager);
         } catch (NoSuchMethodException | InstantiationException | IllegalAccessException | InvocationTargetException e) {
             e.printStackTrace();
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 

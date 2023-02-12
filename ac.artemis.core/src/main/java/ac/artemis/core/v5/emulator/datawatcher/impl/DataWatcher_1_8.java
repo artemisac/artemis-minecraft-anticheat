@@ -4,6 +4,7 @@ import ac.artemis.core.v4.data.PlayerData;
 import ac.artemis.core.v5.emulator.datawatcher.WatchableObject;
 import cc.ghast.packet.buffer.ProtocolByteBuf;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +14,7 @@ public class DataWatcher_1_8 extends AbstractDataWatcher {
     }
 
     @Override
-    public List<WatchableObject> readWatchedListFromPacketBuffer(ProtocolByteBuf buffer) {
+    public List<WatchableObject> readWatchedListFromPacketBuffer(ProtocolByteBuf buffer) throws InvocationTargetException, InstantiationException, IllegalAccessException {
         final List<WatchableObject> list = new ArrayList<>();
 
         for (int i = buffer.readByte(); i != 127; i = buffer.readByte()) {

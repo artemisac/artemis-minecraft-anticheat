@@ -15,6 +15,7 @@ import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 import java.io.File;
 import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
 
 /**
@@ -40,7 +41,7 @@ public class ConfigManager extends Manager {
     }
 
     @Override
-    public void init(InitializeAction initializeAction) {
+    public void init(InitializeAction initializeAction) throws NoSuchAlgorithmException {
         settings = Server.v().getConfig("settings.yml");
         checks = Server.v().getConfig("checks.yml");
         prediction = new PredictionConfiguration("prediction.yml");
@@ -77,8 +78,8 @@ public class ConfigManager extends Manager {
         }
     }
 
-    @SneakyThrows
-    private void initAESKey() {
+    
+    private void initAESKey() throws NoSuchAlgorithmException {
         SecretKey secretKey = KeyGenerator.getInstance("AES").generateKey();
         // Get base64 encoded version of the key
         String encodedKey = Base64.getEncoder().encodeToString(secretKey.getEncoded());

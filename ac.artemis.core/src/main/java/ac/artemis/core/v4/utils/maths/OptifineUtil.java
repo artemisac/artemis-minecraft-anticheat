@@ -45,7 +45,7 @@ public class OptifineUtil {
         return (previous <= 16384L) ? current : getGcd(previous, current % previous);
     }
 
-    @SneakyThrows
+    
     public static void checkOptifine(InitializeAction action, String license) {
 
     }

@@ -8,6 +8,7 @@ import ac.artemis.core.v4.utils.action.ShutdownAction;
 import ac.artemis.core.v5.utils.ClassUtil;
 import lombok.SneakyThrows;
 
+import java.io.IOException;
 import java.lang.reflect.Field;
 import java.util.*;
 
@@ -19,7 +20,7 @@ public class LanguageManager extends Manager {
     private final Map<String, Field> fieldMap = new HashMap<>();
 
     @Override
-    public void init(final InitializeAction action) {
+    public void init(final InitializeAction action) throws IOException {
         final String language = ConfigManager.getSettings().getStringOrDefault("general.language", "en_US");
         try {
             for (final Field declaredField : Lang.class.getDeclaredFields()) {
@@ -46,8 +47,8 @@ public class LanguageManager extends Manager {
         this.fieldMap.clear();
     }
 
-    @SneakyThrows
-    public void setLanguage(final Languages language) {
+    
+    public void setLanguage(final Languages language) throws IOException {
         final Locale locale = language.getLocale();
         final ResourceBundle resourceBundle = new PropertyResourceBundle(ClassUtil.getFileFromLoader(
                 this.getClass(), "lang/messages_" + locale.getLanguage() + "_" + locale.getCountry() + ".properties"));

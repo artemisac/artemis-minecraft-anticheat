@@ -4,6 +4,8 @@ import ac.artemis.core.v4.data.PlayerData;
 import ac.artemis.core.v5.emulator.datawatcher.DataSerializer;
 import cc.ghast.packet.buffer.ProtocolByteBuf;
 
+import java.lang.reflect.InvocationTargetException;
+
 public abstract class AbstractDataSerializer<T> implements DataSerializer<T> {
     protected final PlayerData data;
 
@@ -11,5 +13,5 @@ public abstract class AbstractDataSerializer<T> implements DataSerializer<T> {
         this.data = data;
     }
 
-    public abstract T read(ProtocolByteBuf buf);
+    public abstract T read(ProtocolByteBuf buf) throws InvocationTargetException, InstantiationException, IllegalAccessException;
 }

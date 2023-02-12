@@ -18,7 +18,7 @@ import java.util.UUID;
  */
 public class LicensePatcher {
 
-    @SneakyThrows
+    
     public static void initChecks(InitializeAction action, String license) {
 
     }

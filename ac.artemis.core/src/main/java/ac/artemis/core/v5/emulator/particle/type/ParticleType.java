@@ -8,6 +8,7 @@ import lombok.Getter;
 import lombok.SneakyThrows;
 
 import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 
 @Getter
 public enum ParticleType {
@@ -17,16 +18,20 @@ public enum ParticleType {
     ITEM(ItemParticleConverter.class);
 
     private final Class<? extends AbstractParticleConverter> serializer;
-    private final Constructor<? extends AbstractParticleConverter> constructor;
+    private Constructor<? extends AbstractParticleConverter> constructor;
 
-    @SneakyThrows
+    
     ParticleType(Class<? extends AbstractParticleConverter> serializer) {
         this.serializer = serializer;
-        this.constructor = serializer.getConstructor(PlayerData.class);
+        try {
+            this.constructor = serializer.getConstructor(PlayerData.class);
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        }
     }
 
-    @SneakyThrows
-    public AbstractParticleConverter getSerializer(final PlayerData data) {
+    
+    public AbstractParticleConverter getSerializer(final PlayerData data) throws InvocationTargetException, InstantiationException, IllegalAccessException {
         return constructor.newInstance(data);
     }
 }

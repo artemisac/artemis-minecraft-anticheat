@@ -28,7 +28,7 @@ public class FlushSdkHandlerStandard implements FlushSdkHandler {
     private Set<FlushSdkFeature> features;
 
     @Override
-    public void init() {
+    public void init() throws IllegalAccessException {
         listener = new FlushNonSdkListener(this);
 
         Server.v().getScheduler().runTaskTimerAsynchronously(new Runnable() {
@@ -51,14 +51,14 @@ public class FlushSdkHandlerStandard implements FlushSdkHandler {
 
 
     @Override
-    public void disinit() {
+    public void disinit() throws IllegalAccessException {
         listener = null;
 
         this.ejectPledge();
     }
 
-    @SneakyThrows
-    public void injectPledge() {
+    
+    public void injectPledge() throws IllegalAccessException {
         Object server = ReflectUtil.MINECRAFT_SERVER;
         Class<?> serverClass = ReflectUtil.MINECRAFT_SERVER_CLAZZ;
 
@@ -91,8 +91,8 @@ public class FlushSdkHandlerStandard implements FlushSdkHandler {
         }
     }
 
-    @SneakyThrows
-    public void ejectPledge() {
+    
+    public void ejectPledge() throws IllegalAccessException {
         if (this.hookedField != null) {
             Object server = ReflectUtil.MINECRAFT_SERVER;
 

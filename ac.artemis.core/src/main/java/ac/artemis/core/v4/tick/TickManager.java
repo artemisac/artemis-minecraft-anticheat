@@ -23,7 +23,11 @@ public class TickManager extends Manager  {
         assert flushSdkHandler == null : "TickManager has already started";
 
         flushSdkHandler = new FlushSdkFactory().build();
-        flushSdkHandler.init();
+        try {
+            flushSdkHandler.init();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
 
         this.sdk = flushSdkHandler instanceof FlushSdkHandlerInjected;
     }
@@ -32,7 +36,11 @@ public class TickManager extends Manager  {
     public void disinit(ShutdownAction shutdownAction) {
         assert flushSdkHandler != null : "TickManger has already stopped running";
 
-        flushSdkHandler.disinit();
+        try {
+            flushSdkHandler.disinit();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
         flushSdkHandler = null;
     }
 }

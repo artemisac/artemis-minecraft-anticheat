@@ -6,6 +6,8 @@ import ac.artemis.core.v5.emulator.particle.Particle;
 import ac.artemis.core.v5.emulator.particle.serializer.AbstractParticleConverter;
 import lombok.Getter;
 
+import java.lang.reflect.InvocationTargetException;
+
 @Getter
 public enum Particles {
     AMBIENT_ENTITY_EFFECT(ParticleType.BASIC),
@@ -87,7 +89,7 @@ public enum Particles {
         this.type = type;
     }
 
-    public AbstractParticleConverter getSerializer(PlayerData data) {
+    public AbstractParticleConverter getSerializer(PlayerData data) throws InvocationTargetException, InstantiationException, IllegalAccessException {
         return type.getSerializer(data);
     }
 }

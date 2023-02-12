@@ -258,7 +258,7 @@ public class HTTPRequest {
     /**
      * Reads the response code of the HTTP request
      */
-    @SneakyThrows
+    
     public int readCode() {
         int code = 0;
         try {
