@@ -6,6 +6,10 @@
   <a href="https://github.com/artemisac/Artemis/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Artemis-Anticheat/Artemis?style=social"></a>
 </p>
 
+# What this fork did?
+We fixed the libs and api, so you can build it now
+But here also has a bugs for build.
+
 ### Preface
 Artemis Anticheat has possibly been the longest on-going project I had ever made. I'm happy to open-source this finally to the public. There's a couple things however I'd like to get out of the way right there and then. Please make sure to read everything if you wish to contribute/use this for commercial use.
 - This is open sourced without a license. You are not eligible to use this for commercial use unless strictly allowed by myself (Shanyu Juneja)
