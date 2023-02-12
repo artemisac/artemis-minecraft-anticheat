@@ -1,9 +1,9 @@
 <p align="center">
   <img width="50%" src="https://i.imgur.com/gpjLEmU.png" alt="Artemis">
   <br>
-  <a href="https://github.com/artemisac/Artemis/issues"><img alt="GitHub versions" src="https://img.shields.io/badge/Bukkit%20Version-1.7--1.13.2-blue"></a>
-  <a href="https://github.com/artemisac/Artemis/network"><img alt="GitHub forks" src="https://img.shields.io/spiget/tested-versions/73908?label=Compatible%20versions"></a>
-  <a href="https://github.com/artemisac/Artemis/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Artemis-Anticheat/Artemis?style=social"></a>
+  <a href="https://github.com/SakuraTao2007/artemis-minecraft-anticheat/issues"><img alt="GitHub versions" src="https://img.shields.io/badge/Bukkit%20Version-1.7--1.13.2-blue"></a>
+  <a href="https://github.com/SakuraTao2007/artemis-minecraft-anticheat/network"><img alt="GitHub forks" src="https://img.shields.io/spiget/tested-versions/73908?label=Compatible%20versions"></a>
+  <a href="https://github.com/SakuraTao2007/artemis-minecraft-anticheat/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/SakuraTao2007/artemis-minecraft-anticheat?style=social"></a>
 </p>
 
 # What this fork did?
