@@ -1,5 +1,6 @@
 package ac.artemis.anticheat.api.material;
 
+import ac.artemis.anticheat.api.ArtemisAPI;
 import ac.artemis.packet.minecraft.Minecraft;
 import ac.artemis.packet.minecraft.Server;
 import ac.artemis.packet.minecraft.inventory.ItemStack;
@@ -1933,12 +1934,20 @@ public enum NMSMaterial {
     /**
      * Parses the material of this NMSMaterial.
      *
+     *
+     *
      * @return the material related to this NMSMaterial based on the server version.
      * @since 1.0.0
      */
     
     public Material getMaterial() {
-        return this.parseMaterial();
+        final Material material1 = this.parseMaterial();
+        if (material1 == null) {
+            Server.v().broadcast("Failed to parse material " + name());
+            return null;
+        }
+
+        return material1;
     }
 
     /**

@@ -14,6 +14,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
@@ -42,7 +43,8 @@ public class BukkitServer implements Server {
 
     @Override
     public Player getPlayer(UUID uuid) {
-        return new BukkitPlayer(Bukkit.getPlayer(uuid));
+        final org.bukkit.entity.Player player = Bukkit.getPlayer(uuid);
+        return player == null ? null : new BukkitPlayer(player);
     }
 
     @Override
@@ -75,13 +77,15 @@ public class BukkitServer implements Server {
 
     @Override
     public World getWorld(String s) {
-        return new BukkitWorld(Bukkit.getWorld(s));
+        org.bukkit.World world = Bukkit.getWorld(s);
+        return world == null ? null :  new BukkitWorld(world);
     }
 
     @Override
     public List<World> getWorlds() {
         return Bukkit.getWorlds()
                 .stream()
+                .filter(Objects::nonNull)
                 .map(BukkitWorld::new)
                 .collect(Collectors.toList());
     }

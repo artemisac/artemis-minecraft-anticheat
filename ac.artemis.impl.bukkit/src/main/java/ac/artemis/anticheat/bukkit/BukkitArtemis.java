@@ -68,7 +68,10 @@ public enum BukkitArtemis implements Artemis {
         Material.instance.setWrapper(new Material.MaterialWrapper() {
             @Override
             public Material getMaterial(String s) {
-                return new BukkitMaterial(org.bukkit.Material.getMaterial(s));
+                final org.bukkit.Material material = org.bukkit.Material.getMaterial(s);
+                if (material == null)
+                    System.out.println("Failed to find material of name " + s);
+                return material == null ? null : new BukkitMaterial(material);
             }
         });
 

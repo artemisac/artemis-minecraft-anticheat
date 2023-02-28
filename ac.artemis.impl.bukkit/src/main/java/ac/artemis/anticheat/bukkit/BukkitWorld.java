@@ -26,7 +26,8 @@ public class BukkitWorld extends AbstractWrapper<org.bukkit.World> implements Wo
 
     @Override
     public Block getBlockAt(int x, int y, int z) {
-        return new BukkitBlock(wrapper.getBlockAt(x, y, z));
+        final org.bukkit.block.Block block = wrapper.getBlockAt(x, y, z);
+        return block == null ? null : new BukkitBlock(block);
     }
 
     @Override

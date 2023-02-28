@@ -14,7 +14,7 @@ public class BukkitBlock extends AbstractWrapper<org.bukkit.block.Block> impleme
 
     @Override
     public Material getType() {
-        return new BukkitMaterial(wrapper.getType());
+        return wrapper.getType() == null ? null : new BukkitMaterial(wrapper.getType());
     }
 
     @Override
@@ -39,17 +39,18 @@ public class BukkitBlock extends AbstractWrapper<org.bukkit.block.Block> impleme
 
     @Override
     public Block getRelative(BlockFace blockFace) {
-        return new BukkitBlock(wrapper.getRelative(org.bukkit.block.BlockFace.values()[blockFace.ordinal()]));
+        final org.bukkit.block.Block block = wrapper.getRelative(org.bukkit.block.BlockFace.values()[blockFace.ordinal()]);
+        return block == null ? null : new BukkitBlock(block);
     }
 
     @Override
     public World getWorld() {
-        return new BukkitWorld(wrapper.getWorld());
+        return wrapper.getWorld() == null ? null : new BukkitWorld(wrapper.getWorld());
     }
 
     @Override
     public Location getLocation() {
-        return new BukkitLocation(wrapper.getLocation());
+        return wrapper.getLocation() == null ? null : new BukkitLocation(wrapper.getLocation());
     }
 
     @Override

@@ -11,17 +11,19 @@ public class BukkitInventory extends AbstractWrapper<org.bukkit.inventory.Player
 
     @Override
     public ItemStack getItem(int slot) {
-        return new BukkitItemStack(wrapper.getItem(slot));
+        final org.bukkit.inventory.ItemStack stack = wrapper.getItem(slot);
+
+        return stack == null ? null : new BukkitItemStack(stack);
     }
 
     @Override
     public ItemStack getBoots() {
-        return new BukkitItemStack(wrapper.getBoots());
+        return wrapper.getBoots() == null ? null : new BukkitItemStack(wrapper.getBoots());
     }
 
     @Override
     public ItemStack getItemInHand() {
-        return new BukkitItemStack(wrapper.getItemInHand());
+        return wrapper.getItemInHand() == null ? null : new BukkitItemStack(wrapper.getItemInHand());
     }
 
     @Override

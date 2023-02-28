@@ -20,7 +20,7 @@ public class BukkitItemStack extends AbstractWrapper<org.bukkit.inventory.ItemSt
 
     @Override
     public Material getType() {
-        return new BukkitMaterial(wrapper.getType());
+        return wrapper.getType() == null ? null : new BukkitMaterial(wrapper.getType());
     }
 
     @Override
@@ -60,24 +60,14 @@ public class BukkitItemStack extends AbstractWrapper<org.bukkit.inventory.ItemSt
 
     @Override
     public Map<EnchantType, Integer> getEnchants() {
-        return wrapper == null || wrapper.getEnchantments() == null ? new HashMap<>() : wrapper.getEnchantments().entrySet()
-                .stream()
-                // TODO:
-                .map(e -> new AbstractMap.SimpleEntry<>(
-                        EnchantType.getByName(e.getKey().getName().toLowerCase(Locale.ROOT)),
-                        e.getValue()
-                        )
-                )
-                .collect(Collectors.toMap(new Function<AbstractMap.SimpleEntry<EnchantType, Integer>, EnchantType>() {
-                    @Override
-                    public EnchantType apply(AbstractMap.SimpleEntry<EnchantType, Integer> enchantTypeIntegerSimpleEntry) {
-                        return enchantTypeIntegerSimpleEntry.getKey();
-                    }
-                }, new Function<AbstractMap.SimpleEntry<EnchantType, Integer>, Integer>() {
-                    @Override
-                    public Integer apply(AbstractMap.SimpleEntry<EnchantType, Integer> enchantTypeIntegerSimpleEntry) {
-                        return enchantTypeIntegerSimpleEntry.getValue();
-                    }
-                }));
+        if (wrapper.getEnchantments() == null) {
+            return new HashMap<>();
+        }
+
+        final Map<EnchantType, Integer> results = new HashMap<>();
+        wrapper.getEnchantments().forEach((type, value) -> {
+            results.put(EnchantType.getByName(type.getName()), value);
+        });
+        return results;
     }
 }

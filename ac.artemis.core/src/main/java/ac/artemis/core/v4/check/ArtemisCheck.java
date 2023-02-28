@@ -134,11 +134,13 @@ public abstract class ArtemisCheck implements Check {
         }
 
         // Increase the verbose
-        if (info.getStage().isOrAbove(Stage.RELEASE)) {
+        final boolean release = info.getStage().isOrAbove(Stage.RELEASE);
+        final boolean publish = info.getStage().isOrAbove(Stage.PRE_RELEASE);
+        if (release) {
             this.verbose += value;
         }
 
-        Log log = new Log(data, this.getInfo(), Severity.VERBOSE, System.currentTimeMillis(), verbose, args);
+        Log log = new Log(data, this.getInfo(), publish ? Severity.VERBOSE : Severity.EXPERIMENTAL, System.currentTimeMillis(), verbose, args);
 
 
         // Check if the verbose is high enough for a violation

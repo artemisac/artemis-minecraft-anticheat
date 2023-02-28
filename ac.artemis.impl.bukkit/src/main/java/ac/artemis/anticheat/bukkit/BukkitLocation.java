@@ -65,16 +65,16 @@ public class BukkitLocation extends AbstractWrapper<org.bukkit.Location> impleme
 
     @Override
     public Block getBlock() {
-        return new BukkitBlock(wrapper.getBlock());
+        return wrapper.getBlock() == null ? null : new BukkitBlock(wrapper.getBlock());
     }
 
     @Override
     public Chunk getChunk() {
-        return new BukkitChunk(wrapper.getChunk());
+        return wrapper.getChunk() == null ? null : new BukkitChunk(wrapper.getChunk());
     }
 
     @Override
     public World getWorld() {
-        return new BukkitWorld(wrapper.getWorld());
+        return wrapper.getWorld() == null ? null : new BukkitWorld(wrapper.getWorld());
     }
 }

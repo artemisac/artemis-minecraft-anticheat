@@ -49,7 +49,7 @@ public enum ExemptType {
     /**
      * World change to prevent weird teleport changes
      */
-    WORLD(playerData -> playerData.getMovement().getLastLocation() != null && playerData.getMovement().getLastLocation().getWorld() != playerData.getPlayer().getWorld()),
+    WORLD(playerData -> playerData.getMovement().getLastLocation() != null && playerData.getMovement().getLastLocation().getWorld().v() != playerData.getPlayer().getWorld().v()),
 
     /**
      * Factors which may impact the velocity of a data

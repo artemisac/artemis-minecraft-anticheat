@@ -41,7 +41,7 @@ public class InventorySlotSimple  extends ArtemisCheck implements PacketHandler 
 
             final ItemStack itemStack = data.getPlayer().getInventory().getItem(slot);
 
-            if (itemStack.v() != null && NMSMaterial.matchNMSMaterial(itemStack.getType()) == NMSMaterial.POTION) {
+            if (itemStack != null && itemStack.v() != null && NMSMaterial.matchNMSMaterial(itemStack.getType()) == NMSMaterial.POTION) {
                 final long now = System.currentTimeMillis();
 
                 final int deltaSlot = Math.abs(slot - this.lastSlot);
