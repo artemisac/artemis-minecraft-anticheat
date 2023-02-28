@@ -4,6 +4,10 @@
 
 rootProject.name = 'Artemis'
 
+include(':packet-api')
+include(':packet-generator')
+include(':packet-spigot')
+
 include(':api')
 include(':sdk')
 include(':core')
@@ -22,6 +26,11 @@ include(':engine-v2')
 
 include(':replay')
 include(':impl-bukkit')
+
+project(":packet-api").projectDir = file('ac.artemis.packet.api')
+project(":packet-generator").projectDir = file('ac.artemis.packet.generator')
+project(":packet-spigot").projectDir = file('ac.artemis.packet.spigot')
+
 
 project(":api").projectDir = file('ac.artemis.api')
 project(":sdk").projectDir = file('ac.artemis.sdk')

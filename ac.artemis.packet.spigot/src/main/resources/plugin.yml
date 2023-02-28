@@ -1,0 +1,6 @@
+name: ArtemisSpigotPlugin
+version: ${project.version}
+main: cc.ghast.packet.PacketPlugin
+authors: [ Ghast ]
+description: Packet api implementation for the Spigot api
+website: https://artemis.ac

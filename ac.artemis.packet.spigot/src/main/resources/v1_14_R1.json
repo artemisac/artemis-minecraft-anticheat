@@ -1,0 +1,792 @@
+{
+  "version": "V1_14",
+  "formatMap": {
+    "STATUS": {
+      "state": "STATUS",
+      "inboundPackets": {
+        "0": {
+          "id": 0,
+          "clazz": 2002,
+          "nmsName": "PacketStatusInStart"
+        },
+        "1": {
+          "id": 1,
+          "clazz": 2001,
+          "nmsName": "PacketStatusInPing"
+        }
+      },
+      "outboundPackets": {
+        "0": {
+          "id": 0,
+          "clazz": 5001,
+          "nmsName": "PacketStatusOutServerInfo"
+        },
+        "1": {
+          "id": 1,
+          "clazz": 5002,
+          "nmsName": "PacketStatusOutPong"
+        }
+      }
+    },
+    "HANDSHAKE": {
+      "state": "HANDSHAKE",
+      "inboundPackets": {
+        "0": {
+          "id": 0,
+          "clazz": 0,
+          "nmsName": "PacketHandshakingInSetProtocol"
+        }
+      },
+      "outboundPackets": {}
+    },
+    "PLAY": {
+      "state": "PLAY",
+      "inboundPackets": {
+        "0": {
+          "id": 0,
+          "clazz": 1009,
+          "nmsName": "PacketPlayInTeleportAccept"
+        },
+        "1": {
+          "id": 1,
+          "clazz": 1003,
+          "nmsName": "PacketPlayInTileNBTQuery"
+        },
+        "2": {
+          "id": 2,
+          "clazz": 1012,
+          "nmsName": "PacketPlayInDifficultyChange"
+        },
+        "3": {
+          "id": 3,
+          "clazz": 1007,
+          "nmsName": "PacketPlayInChat"
+        },
+        "4": {
+          "id": 4,
+          "clazz": 1008,
+          "nmsName": "PacketPlayInClientCommand"
+        },
+        "5": {
+          "id": 5,
+          "clazz": 1032,
+          "nmsName": "PacketPlayInSettings"
+        },
+        "6": {
+          "id": 6,
+          "clazz": 1036,
+          "nmsName": "PacketPlayInTabComplete"
+        },
+        "7": {
+          "id": 7,
+          "clazz": 1038,
+          "nmsName": "PacketPlayInTransaction"
+        },
+        "8": {
+          "id": 8,
+          "clazz": 1014,
+          "nmsName": "PacketPlayInEnchantItem"
+        },
+        "9": {
+          "id": 9,
+          "clazz": 1046,
+          "nmsName": "PacketPlayInWindowClick"
+        },
+        "10": {
+          "id": 10,
+          "clazz": 1047,
+          "nmsName": "PacketPlayInCloseWindow"
+        },
+        "11": {
+          "id": 11,
+          "clazz": 1010,
+          "nmsName": "PacketPlayInCustomPayload"
+        },
+        "12": {
+          "id": 12,
+          "clazz": 1006,
+          "nmsName": "PacketPlayInBEdit"
+        },
+        "13": {
+          "id": 13,
+          "clazz": 1016,
+          "nmsName": "PacketPlayInEntityNBTQuery"
+        },
+        "14": {
+          "id": 14,
+          "clazz": 1044,
+          "nmsName": "PacketPlayInUseEntity"
+        },
+        "15": {
+          "id": 15,
+          "clazz": 1022,
+          "nmsName": "PacketPlayInKeepAlive"
+        },
+        "16": {
+          "id": 16,
+          "clazz": 1011,
+          "nmsName": "PacketPlayInDifficultyLock"
+        },
+        "17": {
+          "id": 17,
+          "clazz": 1024,
+          "nmsName": "PacketPlayInPosition"
+        },
+        "18": {
+          "id": 18,
+          "clazz": 1025,
+          "nmsName": "PacketPlayInPositionLook"
+        },
+        "19": {
+          "id": 19,
+          "clazz": 1023,
+          "nmsName": "PacketPlayInLook"
+        },
+        "20": {
+          "id": 20,
+          "clazz": 1017,
+          "nmsName": "PacketPlayInFlying"
+        },
+        "21": {
+          "id": 21,
+          "clazz": 1045,
+          "nmsName": "PacketPlayInVehicleMove"
+        },
+        "22": {
+          "id": 22,
+          "clazz": 1005,
+          "nmsName": "PacketPlayInBoatMove"
+        },
+        "23": {
+          "id": 23,
+          "clazz": 1021,
+          "nmsName": "PacketPlayInPickItem"
+        },
+        "24": {
+          "id": 24,
+          "clazz": 1029,
+          "nmsName": "PacketPlayInAutoRecipe"
+        },
+        "25": {
+          "id": 25,
+          "clazz": 1001,
+          "nmsName": "PacketPlayInAbilities"
+        },
+        "26": {
+          "id": 26,
+          "clazz": 1049,
+          "nmsName": "PacketPlayInBlockDig"
+        },
+        "27": {
+          "id": 27,
+          "clazz": 1015,
+          "nmsName": "PacketPlayInEntityAction"
+        },
+        "28": {
+          "id": 28,
+          "clazz": 1034,
+          "nmsName": "PacketPlayInSteerVehicle"
+        },
+        "29": {
+          "id": 29,
+          "clazz": 1028,
+          "nmsName": "PacketPlayInRecipeDisplayed"
+        },
+        "30": {
+          "id": 30,
+          "clazz": 1020,
+          "nmsName": "PacketPlayInItemName"
+        },
+        "31": {
+          "id": 31,
+          "clazz": 1030,
+          "nmsName": "PacketPlayInResourcePackStatus"
+        },
+        "32": {
+          "id": 32,
+          "clazz": 1035,
+          "nmsName": "PacketPlayInAdvancements"
+        },
+        "33": {
+          "id": 33,
+          "clazz": 1037,
+          "nmsName": "PacketPlayInTrSel"
+        },
+        "34": {
+          "id": 34,
+          "clazz": 1013,
+          "nmsName": "PacketPlayInBeacon"
+        },
+        "35": {
+          "id": 35,
+          "clazz": 1019,
+          "nmsName": "PacketPlayInHeldItemSlot"
+        },
+        "36": {
+          "id": 36,
+          "clazz": 1039,
+          "nmsName": "PacketPlayInSetCommandBlock"
+        },
+        "37": {
+          "id": 37,
+          "clazz": 1041,
+          "nmsName": "PacketPlayInSetCommandMinecart"
+        },
+        "38": {
+          "id": 38,
+          "clazz": 1031,
+          "nmsName": "PacketPlayInSetCreativeSlot"
+        },
+        "39": {
+          "id": 39,
+          "clazz": 1040,
+          "nmsName": "PacketPlayInSetJigsaw"
+        },
+        "40": {
+          "id": 40,
+          "clazz": 1043,
+          "nmsName": "PacketPlayInStruct"
+        },
+        "41": {
+          "id": 41,
+          "clazz": 1042,
+          "nmsName": "PacketPlayInUpdateSign"
+        },
+        "42": {
+          "id": 42,
+          "clazz": 1002,
+          "nmsName": "PacketPlayInArmAnimation"
+        },
+        "43": {
+          "id": 43,
+          "clazz": 1033,
+          "nmsName": "PacketPlayInSpectate"
+        },
+        "44": {
+          "id": 44,
+          "clazz": 1050,
+          "nmsName": "PacketPlayInUseItem"
+        },
+        "45": {
+          "id": 45,
+          "clazz": 1004,
+          "nmsName": "PacketPlayInBlockPlace"
+        }
+      },
+      "outboundPackets": {
+        "0": {
+          "id": 0,
+          "clazz": 4070,
+          "nmsName": "PacketPlayOutSpawnEntity"
+        },
+        "1": {
+          "id": 1,
+          "clazz": 4066,
+          "nmsName": "PacketPlayOutSpawnEntityExperienceOrb"
+        },
+        "2": {
+          "id": 2,
+          "clazz": 4069,
+          "nmsName": "PacketPlayOutSpawnEntityWeather"
+        },
+        "3": {
+          "id": 3,
+          "clazz": 4067,
+          "nmsName": "PacketPlayOutSpawnEntityLiving"
+        },
+        "4": {
+          "id": 4,
+          "clazz": 4068,
+          "nmsName": "PacketPlayOutSpawnEntityPainting"
+        },
+        "5": {
+          "id": 5,
+          "clazz": 4096,
+          "nmsName": "PacketPlayOutNamedEntitySpawn"
+        },
+        "6": {
+          "id": 6,
+          "clazz": 4004,
+          "nmsName": "PacketPlayOutAnimation"
+        },
+        "7": {
+          "id": 7,
+          "clazz": 4072,
+          "nmsName": "PacketPlayOutStatistic"
+        },
+        "8": {
+          "id": 8,
+          "clazz": 4007,
+          "nmsName": "PacketPlayOutBlockBreakAnimation"
+        },
+        "9": {
+          "id": 9,
+          "clazz": 4074,
+          "nmsName": "PacketPlayOutTileEntityData"
+        },
+        "10": {
+          "id": 10,
+          "clazz": 4006,
+          "nmsName": "PacketPlayOutBlockAction"
+        },
+        "11": {
+          "id": 11,
+          "clazz": 4008,
+          "nmsName": "PacketPlayOutBlockChange"
+        },
+        "12": {
+          "id": 12,
+          "clazz": 4011,
+          "nmsName": "PacketPlayOutBoss"
+        },
+        "13": {
+          "id": 13,
+          "clazz": 4022,
+          "nmsName": "PacketPlayOutServerDifficulty"
+        },
+        "14": {
+          "id": 14,
+          "clazz": 4013,
+          "nmsName": "PacketPlayOutChat"
+        },
+        "15": {
+          "id": 15,
+          "clazz": 4009,
+          "nmsName": "PacketPlayOutMultiBlockChange"
+        },
+        "16": {
+          "id": 16,
+          "clazz": 4073,
+          "nmsName": "PacketPlayOutTabComplete"
+        },
+        "17": {
+          "id": 17,
+          "clazz": 4019,
+          "nmsName": "PacketPlayOutCommands"
+        },
+        "18": {
+          "id": 18,
+          "clazz": 4077,
+          "nmsName": "PacketPlayOutTransaction"
+        },
+        "19": {
+          "id": 19,
+          "clazz": 4087,
+          "nmsName": "PacketPlayOutCloseWindow"
+        },
+        "20": {
+          "id": 20,
+          "clazz": 4089,
+          "nmsName": "PacketPlayOutWindowItems"
+        },
+        "21": {
+          "id": 21,
+          "clazz": 4088,
+          "nmsName": "PacketPlayOutWindowData"
+        },
+        "22": {
+          "id": 22,
+          "clazz": 4061,
+          "nmsName": "PacketPlayOutSetSlot"
+        },
+        "23": {
+          "id": 23,
+          "clazz": 4059,
+          "nmsName": "PacketPlayOutSetCooldown"
+        },
+        "24": {
+          "id": 24,
+          "clazz": 4021,
+          "nmsName": "PacketPlayOutCustomPayload"
+        },
+        "25": {
+          "id": 25,
+          "clazz": 4062,
+          "nmsName": "PacketPlayOutCustomSoundEffect"
+        },
+        "26": {
+          "id": 26,
+          "clazz": 4039,
+          "nmsName": "PacketPlayOutKickDisconnect"
+        },
+        "27": {
+          "id": 27,
+          "clazz": 4031,
+          "nmsName": "PacketPlayOutEntityStatus"
+        },
+        "28": {
+          "id": 28,
+          "clazz": 4035,
+          "nmsName": "PacketPlayOutExplosion"
+        },
+        "29": {
+          "id": 29,
+          "clazz": 4016,
+          "nmsName": "PacketPlayOutUnloadChunk"
+        },
+        "30": {
+          "id": 30,
+          "clazz": 4036,
+          "nmsName": "PacketPlayOutGameStateChange"
+        },
+        "31": {
+          "id": 31,
+          "clazz": 4099,
+          "nmsName": "PacketPlayOutOpenWindowHorse"
+        },
+        "32": {
+          "id": 32,
+          "clazz": 4038,
+          "nmsName": "PacketPlayOutKeepAlive"
+        },
+        "33": {
+          "id": 33,
+          "clazz": 4014,
+          "nmsName": "PacketPlayOutMapChunk"
+        },
+        "34": {
+          "id": 34,
+          "clazz": 4092,
+          "nmsName": "PacketPlayOutWorldEvent"
+        },
+        "35": {
+          "id": 35,
+          "clazz": 4093,
+          "nmsName": "PacketPlayOutWorldParticles"
+        },
+        "36": {
+          "id": 36,
+          "clazz": 4080,
+          "nmsName": "PacketPlayOutLightUpdate"
+        },
+        "37": {
+          "id": 37,
+          "clazz": 4040,
+          "nmsName": "PacketPlayOutLogin"
+        },
+        "38": {
+          "id": 38,
+          "clazz": 4041,
+          "nmsName": "PacketPlayOutMap"
+        },
+        "39": {
+          "id": 39,
+          "clazz": 4076,
+          "nmsName": "PacketPlayOutOpenWindowMerchant"
+        },
+        "40": {
+          "id": 40,
+          "clazz": 4029,
+          "nmsName": "PacketPlayOutRelEntityMove"
+        },
+        "41": {
+          "id": 41,
+          "clazz": 4030,
+          "nmsName": "PacketPlayOutRelEntityMoveLook"
+        },
+        "42": {
+          "id": 42,
+          "clazz": 4028,
+          "nmsName": "PacketPlayOutEntityLook"
+        },
+        "43": {
+          "id": 43,
+          "clazz": 4094,
+          "nmsName": "PacketPlayOutEntity"
+        },
+        "44": {
+          "id": 44,
+          "clazz": 4086,
+          "nmsName": "PacketPlayOutVehicleMove"
+        },
+        "45": {
+          "id": 45,
+          "clazz": 4010,
+          "nmsName": "PacketPlayOutOpenBook"
+        },
+        "46": {
+          "id": 46,
+          "clazz": 4090,
+          "nmsName": "PacketPlayOutOpenWindow"
+        },
+        "47": {
+          "id": 47,
+          "clazz": 4044,
+          "nmsName": "PacketPlayOutOpenSignEditor"
+        },
+        "48": {
+          "id": 48,
+          "clazz": 4051,
+          "nmsName": "PacketPlayOutAutoRecipe"
+        },
+        "49": {
+          "id": 49,
+          "clazz": 4001,
+          "nmsName": "PacketPlayOutAbilities"
+        },
+        "50": {
+          "id": 50,
+          "clazz": 4018,
+          "nmsName": "PacketPlayOutCombatEvent"
+        },
+        "51": {
+          "id": 51,
+          "clazz": 4047,
+          "nmsName": "PacketPlayOutPlayerInfo"
+        },
+        "52": {
+          "id": 52,
+          "clazz": 4025,
+          "nmsName": "PacketPlayOutLookAt"
+        },
+        "53": {
+          "id": 53,
+          "clazz": 4049,
+          "nmsName": "PacketPlayOutPosition"
+        },
+        "54": {
+          "id": 54,
+          "clazz": 4050,
+          "nmsName": "PacketPlayOutRecipes"
+        },
+        "55": {
+          "id": 55,
+          "clazz": 4095,
+          "nmsName": "PacketPlayOutEntityDestroy"
+        },
+        "56": {
+          "id": 56,
+          "clazz": 4023,
+          "nmsName": "PacketPlayOutRemoveEntityEffect"
+        },
+        "57": {
+          "id": 57,
+          "clazz": 4053,
+          "nmsName": "PacketPlayOutResourcePackSend"
+        },
+        "58": {
+          "id": 58,
+          "clazz": 4054,
+          "nmsName": "PacketPlayOutRespawn"
+        },
+        "59": {
+          "id": 59,
+          "clazz": 4025,
+          "nmsName": "PacketPlayOutEntityHeadRotation"
+        },
+        "60": {
+          "id": 60,
+          "clazz": 4002,
+          "nmsName": "PacketPlayOutSelectAdvancementTab"
+        },
+        "61": {
+          "id": 61,
+          "clazz": 4091,
+          "nmsName": "PacketPlayOutWorldBorder"
+        },
+        "62": {
+          "id": 62,
+          "clazz": 4012,
+          "nmsName": "PacketPlayOutCamera"
+        },
+        "63": {
+          "id": 63,
+          "clazz": 4037,
+          "nmsName": "PacketPlayOutHeldItemSlot"
+        },
+        "64": {
+          "id": 64,
+          "clazz": 4084,
+          "nmsName": "PacketPlayOutViewCentre"
+        },
+        "65": {
+          "id": 65,
+          "clazz": 4083,
+          "nmsName": "PacketPlayOutViewDistance"
+        },
+        "66": {
+          "id": 66,
+          "clazz": 4056,
+          "nmsName": "PacketPlayOutScoreboardDisplayObjective"
+        },
+        "67": {
+          "id": 67,
+          "clazz": 4026,
+          "nmsName": "PacketPlayOutEntityMetadata"
+        },
+        "68": {
+          "id": 68,
+          "clazz": 4097,
+          "nmsName": "PacketPlayOutAttachEntity"
+        },
+        "69": {
+          "id": 69,
+          "clazz": 4033,
+          "nmsName": "PacketPlayOutEntityVelocity"
+        },
+        "70": {
+          "id": 70,
+          "clazz": 4024,
+          "nmsName": "PacketPlayOutEntityEquipment"
+        },
+        "71": {
+          "id": 71,
+          "clazz": 4034,
+          "nmsName": "PacketPlayOutExperience"
+        },
+        "72": {
+          "id": 72,
+          "clazz": 4079,
+          "nmsName": "PacketPlayOutUpdateHealth"
+        },
+        "73": {
+          "id": 73,
+          "clazz": 4055,
+          "nmsName": "PacketPlayOutScoreboardObjective"
+        },
+        "74": {
+          "id": 74,
+          "clazz": 4027,
+          "nmsName": "PacketPlayOutMount"
+        },
+        "75": {
+          "id": 75,
+          "clazz": 4058,
+          "nmsName": "PacketPlayOutScoreboardTeam"
+        },
+        "76": {
+          "id": 76,
+          "clazz": 4057,
+          "nmsName": "PacketPlayOutScoreboardScore"
+        },
+        "77": {
+          "id": 77,
+          "clazz": 4071,
+          "nmsName": "PacketPlayOutSpawnPosition"
+        },
+        "78": {
+          "id": 78,
+          "clazz": 4085,
+          "nmsName": "PacketPlayOutUpdateTime"
+        },
+        "79": {
+          "id": 79,
+          "clazz": 4075,
+          "nmsName": "PacketPlayOutTitle"
+        },
+        "80": {
+          "id": 80,
+          "clazz": 4063,
+          "nmsName": "PacketPlayOutEntitySound"
+        },
+        "81": {
+          "id": 81,
+          "clazz": 4064,
+          "nmsName": "PacketPlayOutNamedSoundEffect"
+        },
+        "82": {
+          "id": 82,
+          "clazz": 4065,
+          "nmsName": "PacketPlayOutStopSound"
+        },
+        "83": {
+          "id": 83,
+          "clazz": 4048,
+          "nmsName": "PacketPlayOutPlayerListHeaderFooter"
+        },
+        "84": {
+          "id": 84,
+          "clazz": 4043,
+          "nmsName": "PacketPlayOutNBTQuery"
+        },
+        "85": {
+          "id": 85,
+          "clazz": 4017,
+          "nmsName": "PacketPlayOutCollect"
+        },
+        "86": {
+          "id": 86,
+          "clazz": 4032,
+          "nmsName": "PacketPlayOutEntityTeleport"
+        },
+        "87": {
+          "id": 87,
+          "clazz": 4002,
+          "nmsName": "PacketPlayOutAdvancements"
+        },
+        "88": {
+          "id": 88,
+          "clazz": 4078,
+          "nmsName": "PacketPlayOutUpdateAttributes"
+        },
+        "89": {
+          "id": 89,
+          "clazz": 4098,
+          "nmsName": "PacketPlayOutEntityEffect"
+        },
+        "90": {
+          "id": 90,
+          "clazz": 4052,
+          "nmsName": "PacketPlayOutRecipeUpdate"
+        },
+        "91": {
+          "id": 91,
+          "clazz": 4042,
+          "nmsName": "PacketPlayOutTags"
+        },
+        "92": {
+          "id": 92,
+          "clazz": 4007,
+          "nmsName": "PacketPlayOutBlockBreak"
+        }
+      }
+    },
+    "LOGIN": {
+      "state": "LOGIN",
+      "inboundPackets": {
+        "0": {
+          "id": 0,
+          "clazz": 2,
+          "nmsName": "PacketLoginInStart"
+        },
+        "1": {
+          "id": 1,
+          "clazz": 1,
+          "nmsName": "PacketLoginInEncryptionBegin"
+        },
+        "2": {
+          "id": 2,
+          "clazz": 3,
+          "nmsName": "PacketLoginInCustomPayload"
+        }
+      },
+      "outboundPackets": {
+        "0": {
+          "id": 0,
+          "clazz": 3001,
+          "nmsName": "PacketLoginOutDisconnect"
+        },
+        "1": {
+          "id": 1,
+          "clazz": 3002,
+          "nmsName": "PacketLoginOutEncryptionBegin"
+        },
+        "2": {
+          "id": 2,
+          "clazz": 3004,
+          "nmsName": "PacketLoginOutSuccess"
+        },
+        "3": {
+          "id": 3,
+          "clazz": 3003,
+          "nmsName": "PacketLoginOutSetCompression"
+        },
+        "4": {
+          "id": 4,
+          "clazz": 3005,
+          "nmsName": "PacketLoginOutCustomPayload"
+        }
+      }
+    }
+  }
+}

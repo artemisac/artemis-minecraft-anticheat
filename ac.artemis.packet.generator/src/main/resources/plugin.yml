@@ -1,0 +1,6 @@
+name: PacketApiGenerator
+version: ${project.version}
+main: ac.artemis.packet.generator.PacketApiGenerator
+authors: [ Ghast ]
+description: Generator for Artemis Packet API mapping files
+website: https://artemis.ac
