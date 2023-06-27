@@ -3,6 +3,12 @@ package ac.artemis.packet.generator.comparison;
 import ac.artemis.packet.generator.util.Pair;
 import ac.artemis.packet.wrapper.Packet;
 import ac.artemis.packet.wrapper.client.*;
+import ac.artemis.packet.wrapper.client.PacketPlayClientChatAck;
+import ac.artemis.packet.wrapper.client.handshake.PacketHandshakeClientSetProtocol;
+import ac.artemis.packet.wrapper.client.login.PacketLoginClientCustomPayload;
+import ac.artemis.packet.wrapper.client.v1_8.PacketPlayClientCommand;
+import ac.artemis.packet.wrapper.client.v1_8.PacketPlayClientItemHeldSlot;
+import ac.artemis.packet.wrapper.client.v1_8.PacketPlayClientWindowClose;
 import ac.artemis.packet.wrapper.server.*;
 
 import java.util.Arrays;
@@ -77,7 +83,11 @@ public class HardcodeMap {
             wrap("PacketPlayOutOpenWindowHorse", PacketPlayServerWindowHorse.class),
 
             wrap("PacketLoginInCustomPayload", PacketLoginClientCustomPayload.class),
-            wrap("PacketLoginOutCustomPayload", PacketLoginServerCustomPayload.class)
+            wrap("PacketLoginOutCustomPayload", PacketLoginServerCustomPayload.class),
+
+            wrap("ServerboundPongPacket", PacketPlayClientPing.class),
+            wrap("ServerboundChatAckPacket", PacketPlayClientChatAck.class)
+
 
     );
 

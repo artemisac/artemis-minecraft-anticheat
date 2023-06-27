@@ -2,7 +2,7 @@ package cc.ghast.packet.wrapper.packet.play.client;
 
 import ac.artemis.packet.protocol.ProtocolVersion;
 import ac.artemis.packet.spigot.protocol.PacketLink;
-import ac.artemis.packet.wrapper.client.PacketPlayClientUpdateSign;
+import ac.artemis.packet.wrapper.client.v1_8.PacketPlayClientUpdateSign;
 import cc.ghast.packet.buffer.ProtocolByteBuf;
 import cc.ghast.packet.wrapper.bukkit.BlockPosition;
 import cc.ghast.packet.wrapper.packet.ReadableBuffer;

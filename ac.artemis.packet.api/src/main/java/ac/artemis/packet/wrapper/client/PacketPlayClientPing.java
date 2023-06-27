@@ -1,6 +1,8 @@
 package ac.artemis.packet.wrapper.client;
 
-public interface PacketPlayClientPing {
+import ac.artemis.packet.wrapper.PacketClient;
+
+public interface PacketPlayClientPing extends PacketClient {
     /**
      * @return ID of the ping to the client
      */

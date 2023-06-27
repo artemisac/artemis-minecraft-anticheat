@@ -3,7 +3,7 @@ package cc.ghast.packet.wrapper.packet.play.client;
 import ac.artemis.packet.minecraft.inventory.ItemStack;
 import ac.artemis.packet.protocol.ProtocolVersion;
 import ac.artemis.packet.spigot.protocol.PacketLink;
-import ac.artemis.packet.wrapper.client.PacketPlayClientWindowClick;
+import ac.artemis.packet.wrapper.client.v1_8.PacketPlayClientWindowClick;
 import cc.ghast.packet.buffer.ProtocolByteBuf;
 import cc.ghast.packet.wrapper.packet.ReadableBuffer;
 import ac.artemis.packet.spigot.wrappers.GPacket;

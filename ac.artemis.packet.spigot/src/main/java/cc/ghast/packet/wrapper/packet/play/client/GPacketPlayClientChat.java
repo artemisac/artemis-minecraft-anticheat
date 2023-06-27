@@ -3,14 +3,14 @@ package cc.ghast.packet.wrapper.packet.play.client;
 import ac.artemis.packet.protocol.ProtocolVersion;
 import ac.artemis.packet.spigot.protocol.PacketLink;
 import ac.artemis.packet.spigot.wrappers.GPacket;
-import ac.artemis.packet.wrapper.client.PacketPlayClientChat;
+import ac.artemis.packet.wrapper.client.v1_8.PacketPlayClientChatMessage;
 import cc.ghast.packet.buffer.ProtocolByteBuf;
 import cc.ghast.packet.wrapper.packet.ReadableBuffer;
 
 import java.util.UUID;
 
-@PacketLink(PacketPlayClientChat.class)
-public class GPacketPlayClientChat extends GPacket implements PacketPlayClientChat, ReadableBuffer {
+@PacketLink(PacketPlayClientChatMessage.class)
+public class GPacketPlayClientChat extends GPacket implements PacketPlayClientChatMessage, ReadableBuffer {
 
     public GPacketPlayClientChat(UUID player, ProtocolVersion version) {
         super("PacketPlayInChat", player, version);

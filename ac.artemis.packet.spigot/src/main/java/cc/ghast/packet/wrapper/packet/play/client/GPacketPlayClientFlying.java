@@ -2,7 +2,7 @@ package cc.ghast.packet.wrapper.packet.play.client;
 
 import ac.artemis.packet.protocol.ProtocolVersion;
 import ac.artemis.packet.spigot.protocol.PacketLink;
-import ac.artemis.packet.wrapper.client.PacketPlayClientFlying;
+import ac.artemis.packet.wrapper.client.v1_8.PacketPlayClientLoc;
 import cc.ghast.packet.buffer.ProtocolByteBuf;
 import cc.ghast.packet.wrapper.packet.ReadableBuffer;
 import ac.artemis.packet.spigot.wrappers.GPacket;
@@ -12,8 +12,8 @@ import java.util.Objects;
 import java.util.UUID;
 
 @Getter
-@PacketLink(PacketPlayClientFlying.class)
-public class GPacketPlayClientFlying extends GPacket implements PacketPlayClientFlying, ReadableBuffer {
+@PacketLink(PacketPlayClientLoc.class)
+public class GPacketPlayClientFlying extends GPacket implements PacketPlayClientLoc, ReadableBuffer {
     public GPacketPlayClientFlying(UUID player, ProtocolVersion version) {
         super("PacketPlayInFlying", player, version);
     }

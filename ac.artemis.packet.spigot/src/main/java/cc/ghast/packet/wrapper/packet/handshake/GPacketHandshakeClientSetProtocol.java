@@ -2,7 +2,7 @@ package cc.ghast.packet.wrapper.packet.handshake;
 
 import ac.artemis.packet.protocol.ProtocolVersion;
 import ac.artemis.packet.spigot.protocol.PacketLink;
-import ac.artemis.packet.wrapper.client.PacketHandshakeClientSetProtocol;
+import ac.artemis.packet.wrapper.client.handshake.PacketHandshakeClientSetProtocol;
 import cc.ghast.packet.buffer.ProtocolByteBuf;
 import ac.artemis.packet.spigot.wrappers.GPacket;
 import cc.ghast.packet.wrapper.packet.ReadableBuffer;

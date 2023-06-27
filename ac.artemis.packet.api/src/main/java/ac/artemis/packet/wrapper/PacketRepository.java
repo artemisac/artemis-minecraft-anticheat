@@ -1,6 +1,11 @@
 package ac.artemis.packet.wrapper;
 
 import ac.artemis.packet.wrapper.client.*;
+import ac.artemis.packet.wrapper.client.v1_8.*;
+import ac.artemis.packet.wrapper.client.handshake.PacketHandshakeClientSetProtocol;
+import ac.artemis.packet.wrapper.client.login.PacketLoginClientCustomPayload;
+import ac.artemis.packet.wrapper.client.login.PacketLoginClientEncryptionBegin;
+import ac.artemis.packet.wrapper.client.login.PacketLoginClientStart;
 import ac.artemis.packet.wrapper.server.*;
 
 import java.util.Map;
@@ -44,7 +49,7 @@ public class PacketRepository {
         repository.put(CLIENT_PLAY + 4, PacketPlayClientBlockPlace.class);
         repository.put(CLIENT_PLAY + 5, PacketPlayClientBoatMove.class);
         repository.put(CLIENT_PLAY + 6, PacketPlayClientBookEdit.class);
-        repository.put(CLIENT_PLAY + 7, PacketPlayClientChat.class);
+        repository.put(CLIENT_PLAY + 7, PacketPlayClientChatMessage.class);
         repository.put(CLIENT_PLAY + 8, PacketPlayClientCommand.class);
         repository.put(CLIENT_PLAY + 9, PacketPlayClientConfirmTeleport.class);
         repository.put(CLIENT_PLAY + 10, PacketPlayClientCustomPayload.class);
@@ -54,15 +59,15 @@ public class PacketRepository {
         repository.put(CLIENT_PLAY + 14, PacketPlayClientEnchantItem.class);
         repository.put(CLIENT_PLAY + 15, PacketPlayClientEntityAction.class);
         repository.put(CLIENT_PLAY + 16, PacketPlayClientEntityMetadata.class);
-        repository.put(CLIENT_PLAY + 17, PacketPlayClientFlying.class);
+        repository.put(CLIENT_PLAY + 17, PacketPlayClientLoc.class);
         repository.put(CLIENT_PLAY + 18, PacketPlayClientGenerateStructure.class);
         repository.put(CLIENT_PLAY + 19, PacketPlayClientItemHeldSlot.class);
         repository.put(CLIENT_PLAY + 20, PacketPlayClientItemName.class);
         repository.put(CLIENT_PLAY + 21, PacketPlayClientItemPick.class);
         repository.put(CLIENT_PLAY + 22, PacketPlayClientKeepAlive.class);
-        repository.put(CLIENT_PLAY + 23, PacketPlayClientLook.class);
-        repository.put(CLIENT_PLAY + 24, PacketPlayClientPosition.class);
-        repository.put(CLIENT_PLAY + 25, PacketPlayClientPositionLook.class);
+        repository.put(CLIENT_PLAY + 23, PacketPlayClientLocLook.class);
+        repository.put(CLIENT_PLAY + 24, PacketPlayClientLocPosition.class);
+        repository.put(CLIENT_PLAY + 25, PacketPlayClientLocPositionLook.class);
         repository.put(CLIENT_PLAY + 26, PacketPlayClientRecipeBookData.class);
         repository.put(CLIENT_PLAY + 27, PacketPlayClientRecipeBookState.class);
         repository.put(CLIENT_PLAY + 28, PacketPlayClientRecipeDisplay.class);

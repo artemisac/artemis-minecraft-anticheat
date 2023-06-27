@@ -4,7 +4,7 @@ import ac.artemis.packet.protocol.ProtocolVersion;
 import ac.artemis.packet.spigot.protocol.PacketLink;
 import ac.artemis.packet.spigot.utils.ServerUtil;
 import ac.artemis.packet.spigot.wrappers.GPacket;
-import ac.artemis.packet.wrapper.client.PacketPlayClientPosition;
+import ac.artemis.packet.wrapper.client.v1_8.PacketPlayClientLocPosition;
 import cc.ghast.packet.buffer.ProtocolByteBuf;
 import cc.ghast.packet.wrapper.packet.ReadableBuffer;
 import lombok.Getter;
@@ -13,8 +13,8 @@ import java.util.Objects;
 import java.util.UUID;
 
 @Getter
-@PacketLink(PacketPlayClientPosition.class)
-public class GPacketPlayClientPosition extends GPacket implements PacketPlayClientPosition, ReadableBuffer {
+@PacketLink(PacketPlayClientLocPosition.class)
+public class GPacketPlayClientPosition extends GPacket implements PacketPlayClientLocPosition, ReadableBuffer {
     public GPacketPlayClientPosition(UUID player, ProtocolVersion version) {
         super((ServerUtil.getGameVersion().isBelow(ProtocolVersion.V1_8) ? "" : "PacketPlayInFlying$")
                 + "PacketPlayInPosition", player, version);

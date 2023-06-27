@@ -4,7 +4,7 @@ import ac.artemis.packet.minecraft.inventory.ItemStack;
 import ac.artemis.packet.protocol.ProtocolVersion;
 import ac.artemis.packet.spigot.protocol.PacketLink;
 import ac.artemis.packet.spigot.utils.ServerUtil;
-import ac.artemis.packet.wrapper.client.PacketPlayClientBlockPlace;
+import ac.artemis.packet.wrapper.client.v1_8.PacketPlayClientBlockPlace;
 import cc.ghast.packet.buffer.ProtocolByteBuf;
 import cc.ghast.packet.buffer.types.Converters;
 import cc.ghast.packet.nms.EnumDirection;
